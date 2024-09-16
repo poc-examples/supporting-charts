@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  data-connector:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-16T21:00:57.140571838Z"
+    description: A Helm chart for Kubernetes
+    digest: 4982953963f1985ddec17fed3c288ff9f53a961e42e340a482d36e8e54d0b5fe
+    name: data-connector
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/data-connector-0.1.1/data-connector-0.1.1.tgz
+    version: 0.1.1
   external-secret:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -11,4 +22,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-09-16T20:13:19.290152144Z"
+generated: "2024-09-16T21:00:57.140596855Z"
