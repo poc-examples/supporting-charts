@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  external-secret:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-16T20:13:19.290144029Z"
+    description: A Helm chart for Kubernetes
+    digest: 79dc944e841ca8e8d6ec7fb0ab3b603a24cedfebb9140a6f08dbae94d3b0e7ae
+    name: external-secret
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
+    version: 0.1.2
+generated: "2024-09-16T20:13:19.290152144Z"
