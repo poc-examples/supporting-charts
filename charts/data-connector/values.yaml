@@ -1,0 +1,7 @@
+clusterSecretStoreName: test-secret-store
+
+dataConnection:
+  name: test-connection
+  config:
+    defaultRegion: us-east-1
+    bucketName: test-bucket

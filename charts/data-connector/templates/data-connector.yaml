@@ -20,42 +20,21 @@ spec:
       type: generic
       data:
         AWS_ACCESS_KEY_ID: "{{`{{ .AWS_ACCESS_KEY_ID }}`}}"
-        AWS_DEFAULT_REGION: "{{`{{ .AWS_DEFAULT_REGION }}`}}"
-        AWS_S3_BUCKET: "{{`{{ .AWS_S3_BUCKET }}`}}"
-        AWS_S3_ENDPOINT: "{{`{{ .AWS_S3_ENDPOINT }}`}}"
         AWS_SECRET_ACCESS_KEY: "{{`{{ .AWS_SECRET_ACCESS_KEY }}`}}"
+        AWS_DEFAULT_REGION: "{{ .Values.dataConnection.config.defaultRegion }}"
+        AWS_S3_BUCKET: "{{ .Values.dataConnection.config.bucketName }}"
+        AWS_S3_ENDPOINT: "https://s3.{{ .Values.dataConnection.config.defaultRegion }}.amazonaws.com"
   data:
     - secretKey: "AWS_ACCESS_KEY_ID"
       remoteRef:
-        conversionStrategy: Default	
+        conversionStrategy: Default
         decodingStrategy: None
         metadataPolicy: None
         key: "{{ .Values.dataConnection.name }}"
         property: AWS_ACCESS_KEY_ID
-    - secretKey: "AWS_DEFAULT_REGION"
-      remoteRef:
-        conversionStrategy: Default	
-        decodingStrategy: None
-        metadataPolicy: None
-        key: "{{ .Values.dataConnection.name }}"
-        property: AWS_DEFAULT_REGION
-    - secretKey: "AWS_S3_BUCKET"
-      remoteRef:
-        conversionStrategy: Default	
-        decodingStrategy: None
-        metadataPolicy: None
-        key: "{{ .Values.dataConnection.name }}"
-        property: AWS_S3_BUCKET
-    - secretKey: "AWS_S3_ENDPOINT"
-      remoteRef:
-        conversionStrategy: Default	
-        decodingStrategy: None
-        metadataPolicy: None
-        key: "{{ .Values.dataConnection.name }}"
-        property: AWS_S3_ENDPOINT
     - secretKey: "AWS_SECRET_ACCESS_KEY"
       remoteRef:
-        conversionStrategy: Default	
+        conversionStrategy: Default
         decodingStrategy: None
         metadataPolicy: None
         key: "{{ .Values.dataConnection.name }}"
