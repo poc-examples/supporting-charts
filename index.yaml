@@ -32,6 +32,17 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/data-science-project-0.1.0/data-science-project-0.1.0.tgz
     version: 0.1.0
+  data-workbench:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-18T20:51:43.011928838Z"
+    description: A Helm chart for Kubernetes
+    digest: c2a6155d8b9bbeb389505f2c9f6badb9dd8b7a1eac8d5ddd87e8e13bbea1a53d
+    name: data-workbench
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/data-workbench-0.1.0/data-workbench-0.1.0.tgz
+    version: 0.1.0
   external-secret:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -43,4 +54,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-09-18T17:18:04.629411142Z"
+generated: "2024-09-18T20:51:43.011941101Z"
