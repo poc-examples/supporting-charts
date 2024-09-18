@@ -21,6 +21,17 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/data-connector-0.1.1/data-connector-0.1.1.tgz
     version: 0.1.1
+  data-science-project:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-18T17:18:04.629402786Z"
+    description: A Helm chart for Kubernetes
+    digest: e1de87121e228ffd3b21397d9c5593fcacb1d710855e0da649dd402a99341472
+    name: data-science-project
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/data-science-project-0.1.0/data-science-project-0.1.0.tgz
+    version: 0.1.0
   external-secret:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -32,4 +43,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-09-17T00:33:32.549299811Z"
+generated: "2024-09-18T17:18:04.629411142Z"
