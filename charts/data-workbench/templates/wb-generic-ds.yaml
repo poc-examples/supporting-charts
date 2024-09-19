@@ -3,7 +3,7 @@ kind: Notebook
 metadata:
   annotations:
     notebooks.opendatahub.io/inject-oauth: "true"
-    notebooks.opendatahub.io/last-image-selection: s2i-generic-data-science-notebook:2024.1
+    notebooks.opendatahub.io/last-image-selection: odh-generic-data-science-notebook:v2-20240917
     notebooks.opendatahub.io/last-size-selection: Small
     notebooks.opendatahub.io/oauth-logout-url: https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
     opendatahub.io/accelerator-name: ""
@@ -30,7 +30,7 @@ spec:
                               --ServerApp.quit_button=False
                               --ServerApp.tornado_settings={"user":"{{ .Values.user }}","hub_host":"https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}","hub_prefix":"/projects/{{ .Values.namespace }}"}
         - name: JUPYTER_IMAGE
-          value: image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/s2i-generic-data-science-notebook:2024.1
+          value: quay.io/modh/odh-generic-data-science-notebook:v2-20240917
         - name: PIP_CERT
           value: /etc/pki/tls/custom-certs/ca-bundle.crt
         - name: REQUESTS_CA_BUNDLE
