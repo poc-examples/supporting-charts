@@ -32,6 +32,17 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/data-science-project-0.1.0/data-science-project-0.1.0.tgz
     version: 0.1.0
+  data-single-model-server:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-19T16:17:58.325633887Z"
+    description: A Helm chart for Kubernetes
+    digest: 20c9ad5deadd82a37b0bf12ec714bc471e2983c1feef190099d8c0b97bb95c64
+    name: data-single-model-server
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/data-single-model-server-0.1.0/data-single-model-server-0.1.0.tgz
+    version: 0.1.0
   data-workbench:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -74,4 +85,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-09-19T13:21:36.878011099Z"
+generated: "2024-09-19T16:17:58.325646541Z"
