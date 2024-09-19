@@ -44,7 +44,7 @@ spec:
         envFrom:
         - secretRef:
             name: "aws-connection-{{ .Values.dataConnectionName }}"
-        image: image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/s2i-generic-data-science-notebook:2024.1
+        image: 'quay.io/modh/odh-generic-data-science-notebook:v2-20240917'
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
