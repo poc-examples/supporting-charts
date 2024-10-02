@@ -75,11 +75,11 @@ spec:
           timeoutSeconds: 1
         resources:
           limits:
-            cpu: "1"
+            cpu: "2"
             memory: 8Gi
           requests:
             cpu: "1"
-            memory: 8Gi
+            memory: 4Gi
         volumeMounts:
         - mountPath: /opt/app-root/src
           name: "{{ .Values.notebookName }}"
