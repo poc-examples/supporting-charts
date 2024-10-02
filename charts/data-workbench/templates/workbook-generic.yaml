@@ -104,7 +104,8 @@ spec:
         - '--email-domain=*'
         - '--skip-provider-button'
         - '--openshift-sar={"verb":"get","resource":"notebooks","resourceAPIGroup":"kubeflow.org","resourceName":"{{ .Values.notebookName }}","namespace":"$(NAMESPACE)"}'
-        - '--logout-url=https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}'
+        - >
+          '--logout-url=https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}'
         env:
         - name: NAMESPACE
           valueFrom:
