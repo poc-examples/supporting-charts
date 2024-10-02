@@ -4,3 +4,4 @@ namespace: inference-servers
 notebookName: build-models
 storageSize: 100Gi
 dataConnectionName: inference-models
+enableCUDA: false

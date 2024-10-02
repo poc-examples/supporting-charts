@@ -1,3 +1,4 @@
+{{- if not .Values.enableCUDA }}
 apiVersion: kubeflow.org/v1
 kind: Notebook
 metadata:
@@ -5,7 +6,8 @@ metadata:
     notebooks.opendatahub.io/inject-oauth: "true"
     notebooks.opendatahub.io/last-image-selection: odh-generic-data-science-notebook:v2-20240917
     notebooks.opendatahub.io/last-size-selection: Small
-    notebooks.opendatahub.io/oauth-logout-url: https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
+    notebooks.opendatahub.io/oauth-logout-url: >
+      https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
     opendatahub.io/accelerator-name: ""
     opendatahub.io/image-display-name: Standard Data Science
     opendatahub.io/username: "{{ .Values.user }}"
@@ -171,3 +173,4 @@ spec:
         secret:
           defaultMode: 420
           secretName: "{{ .Values.notebookName }}-tls"
+{{- end }}
