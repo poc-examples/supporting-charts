@@ -4,3 +4,6 @@ metadata:
   name: "{{ .Values.project }}"
   labels:
     opendatahub.io/dashboard: "true"
+    {{- if .Values.modelMesh }}
+    modelmesh-enabled: "{{ .Values.modelMesh }}"
+    {{- end }}
