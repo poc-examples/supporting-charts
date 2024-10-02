@@ -103,9 +103,10 @@ spec:
         - '--upstream-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt'
         - '--email-domain=*'
         - '--skip-provider-button'
-        - '--openshift-sar={"verb":"get","resource":"notebooks","resourceAPIGroup":"kubeflow.org","resourceName":"{{ .Values.notebookName }}","namespace":"$(NAMESPACE)"}'
         - >
-          '--logout-url=https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}'
+          --openshift-sar={"verb":"get","resource":"notebooks","resourceAPIGroup":"kubeflow.org","resourceName":"{{ .Values.notebookName }}","namespace":"{{ .Values.namespace }}"}
+        - >
+          --logout-url=https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
         env:
         - name: NAMESPACE
           valueFrom:
