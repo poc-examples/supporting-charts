@@ -26,11 +26,11 @@ spec:
         - name: NOTEBOOK_ARGS
           value: |-
             --ServerApp.port=8888
-                              --ServerApp.token=''
-                              --ServerApp.password=''
-                              --ServerApp.base_url=/notebook/{{ .Values.namespace }}/{{ .Values.notebookName }}
-                              --ServerApp.quit_button=False
-                              --ServerApp.tornado_settings={"user":"{{ .Values.user }}","hub_host":"https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}","hub_prefix":"/projects/{{ .Values.namespace }}"}
+            --ServerApp.token=''
+            --ServerApp.password=''
+            --ServerApp.base_url=/notebook/{{ .Values.namespace }}/{{ .Values.notebookName }}
+            --ServerApp.quit_button=False
+            --ServerApp.tornado_settings={"user":"{{ .Values.user }}","hub_host":"https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}","hub_prefix":"/projects/{{ .Values.namespace }}"}
         - name: JUPYTER_IMAGE
           value: quay.io/modh/odh-generic-data-science-notebook:v2-20240917
         - name: PIP_CERT

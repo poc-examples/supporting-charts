@@ -25,13 +25,13 @@ spec:
         - name: "{{ .Values.notebookName }}"
           resources:
             limits:
-              cpu: '14'
-              memory: 56Gi
-              nvidia.com/gpu: '2'
+              cpu: '2'
+              memory: 45Gi
+              nvidia.com/gpu: "{{ .Values.numGPU }}"
             requests:
-              cpu: '7'
-              memory: 56Gi
-              nvidia.com/gpu: '2'
+              cpu: '2'
+              memory: 45Gi
+              nvidia.com/gpu: "{{ .Values.numGPU }}"
           readinessProbe:
             failureThreshold: 3
             httpGet:
