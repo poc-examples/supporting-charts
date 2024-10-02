@@ -35,6 +35,16 @@ entries:
   data-single-model-server:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-10-02T13:32:04.971112417Z"
+    description: A Helm chart for Kubernetes
+    digest: f91f61c296bc7b5630554fb843b938e01a11c51f559a5bfbce49563586099e18
+    name: data-single-model-server
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/data-single-model-server-0.1.1/data-single-model-server-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-09-19T16:17:58.325633887Z"
     description: A Helm chart for Kubernetes
     digest: 20c9ad5deadd82a37b0bf12ec714bc471e2983c1feef190099d8c0b97bb95c64
@@ -85,4 +95,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-09-19T16:17:58.325646541Z"
+generated: "2024-10-02T13:32:04.971126934Z"
