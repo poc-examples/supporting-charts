@@ -76,6 +76,16 @@ entries:
   data-workbench:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-10-02T20:45:43.106984979Z"
+    description: A Helm chart for Kubernetes
+    digest: a5354f01e70f16b2374826465e061da07f2ce5f0054adb9d84b2dbb6940a60cd
+    name: data-workbench
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/data-workbench-0.1.10/data-workbench-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-10-02T20:42:14.551779305Z"
     description: A Helm chart for Kubernetes
     digest: 3f40cf828694128d9640e2c2b0fc2ab99524671196c6d7b111584b1d34726c23
@@ -185,4 +195,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-10-02T20:42:14.551828447Z"
+generated: "2024-10-02T20:45:43.107040272Z"
