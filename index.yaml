@@ -24,6 +24,16 @@ entries:
   data-science-project:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-10-02T18:41:00.632103697Z"
+    description: A Helm chart for Kubernetes
+    digest: e19f3b26479d4e4dbfdce78d1b0db661ac03540edef1ede18635c98765822939
+    name: data-science-project
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/data-science-project-0.1.2/data-science-project-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-10-02T18:36:28.688755733Z"
     description: A Helm chart for Kubernetes
     digest: 825e6c73d9622302f2868594cf1c11ecdfe9dbcc33c6da0b78da92b95ea44db0
@@ -115,4 +125,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-10-02T18:36:28.688781452Z"
+generated: "2024-10-02T18:41:00.632128504Z"
