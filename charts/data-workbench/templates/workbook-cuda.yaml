@@ -12,12 +12,13 @@ metadata:
     openshift.io/display-name: "{{ .Values.notebookName }}"
     notebooks.opendatahub.io/last-image-selection: 'minimal-gpu:2024.1'
     notebooks.opendatahub.io/last-size-selection: Large
-    opendatahub.io/username: "{{ .Values.user }}"
+    opendatahub.io/username: "kube:admin"
   name: "{{ .Values.notebookName }}"
   labels:
     app: "{{ .Values.notebookName }}"
     opendatahub.io/dashboard: 'true'
     opendatahub.io/odh-managed: 'true'
+    opendatahub.io/user: cluster-2dadmin
 spec:
   template:
     spec:

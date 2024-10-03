@@ -9,13 +9,14 @@ metadata:
     notebooks.opendatahub.io/oauth-logout-url: https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
     opendatahub.io/accelerator-name: ""
     opendatahub.io/image-display-name: Standard Data Science
-    opendatahub.io/username: "{{ .Values.user }}"
+    opendatahub.io/username: "admin"
     openshift.io/description: ""
     openshift.io/display-name: "{{ .Values.notebookName }}"
   labels:
     app: "{{ .Values.notebookName }}"
     opendatahub.io/dashboard: "true"
     opendatahub.io/odh-managed: "true"
+    opendatahub.io/user: admin
   name: "{{ .Values.notebookName }}"
 spec:
   template:
@@ -29,9 +30,9 @@ spec:
                               --ServerApp.password=''
                               --ServerApp.base_url=/notebook/{{ .Values.namespace }}/{{ .Values.notebookName }}
                               --ServerApp.quit_button=False
-                              --ServerApp.tornado_settings={"user":"{{ .Values.user }}","hub_host":"https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}","hub_prefix":"/projects/{{ .Values.namespace }}"}
+                              --ServerApp.tornado_settings={"user":"admin","hub_host":"https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}","hub_prefix":"/projects/{{ .Values.namespace }}"}
         - name: JUPYTER_IMAGE
-          value: quay.io/modh/odh-generic-data-science-notebook:v2-20240917
+          value: 'image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/s2i-generic-data-science-notebook:2024.1'
         - name: PIP_CERT
           value: /etc/pki/tls/custom-certs/ca-bundle.crt
         - name: REQUESTS_CA_BUNDLE
@@ -45,7 +46,7 @@ spec:
         envFrom:
         - secretRef:
             name: "aws-connection-{{ .Values.dataConnectionName }}"
-        image: 'quay.io/modh/odh-generic-data-science-notebook:v2-20240917'
+        image: 'image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/s2i-generic-data-science-notebook:2024.1'
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
@@ -78,7 +79,7 @@ spec:
             memory: 8Gi
           requests:
             cpu: "1"
-            memory: 4Gi
+            memory: 8i
         volumeMounts:
         - mountPath: /opt/app-root/src
           name: "{{ .Values.notebookName }}"
