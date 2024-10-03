@@ -5,20 +5,18 @@ metadata:
   annotations:
     notebooks.opendatahub.io/inject-oauth: 'true'
     opendatahub.io/image-display-name: CUDA
-    notebooks.opendatahub.io/oauth-logout-url: >
-      https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
+    notebooks.opendatahub.io/oauth-logout-url: https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
     opendatahub.io/accelerator-name: migrated-gpu
     openshift.io/description: ''
     openshift.io/display-name: "{{ .Values.notebookName }}"
     notebooks.opendatahub.io/last-image-selection: 'minimal-gpu:2024.1'
-    notebooks.opendatahub.io/last-size-selection: Large
-    opendatahub.io/username: "kube:admin"
+    opendatahub.io/username: "admin"
   name: "{{ .Values.notebookName }}"
   labels:
     app: "{{ .Values.notebookName }}"
     opendatahub.io/dashboard: 'true'
     opendatahub.io/odh-managed: 'true'
-    opendatahub.io/user: cluster-2dadmin
+    opendatahub.io/user: admin
 spec:
   template:
     spec:
@@ -61,9 +59,9 @@ spec:
                 --ServerApp.password=''
                 --ServerApp.base_url=/notebook/{{ .Values.namespace }}/{{ .Values.notebookName }}
                 --ServerApp.quit_button=False
-                --ServerApp.tornado_settings={"user":"{{ .Values.user }}","hub_host":"https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}","hub_prefix":"/projects/{{ .Values.namespace }}"}
+                --ServerApp.tornado_settings={"user":"admin","hub_host":"https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}","hub_prefix":"/projects/{{ .Values.namespace }}"}
             - name: JUPYTER_IMAGE
-              value: 'quay.io/modh/cuda-notebooks@sha256:3beed917f90b12239d57cf49c864c6249236c8ffcafcc7eb06b0b55272ef5b55'
+              value: 'image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/minimal-gpu:2024.1'
             - name: PIPELINES_SSL_SA_CERTS
               value: /etc/pki/tls/custom-certs/ca-bundle.crt
             - name: GIT_SSL_CAINFO
@@ -91,7 +89,7 @@ spec:
           envFrom:
             - secretRef:
                 name: aws-connection-{{ .Values.dataConnectionName }}
-          image: 'quay.io/modh/cuda-notebooks@sha256:3beed917f90b12239d57cf49c864c6249236c8ffcafcc7eb06b0b55272ef5b55'
+          image: 'image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/minimal-gpu:2024.1'
           workingDir: /opt/app-root/src
         - name: oauth-proxy
           resources:
@@ -138,20 +136,20 @@ spec:
               name: tls-certificates
           image: 'registry.redhat.io/openshift4/ose-oauth-proxy@sha256:4bef31eb993feb6f1096b51b4876c65a6fb1f4401fee97fa4f4542b6b7c9bc46'
           args:
-            - '--provider=openshift'
-            - '--https-address=:8443'
-            - '--http-address='
-            - '--openshift-service-account={{ .Values.notebookName }}'
-            - '--cookie-secret-file=/etc/oauth/config/cookie_secret'
-            - '--cookie-expire=24h0m0s'
-            - '--tls-cert=/etc/tls/private/tls.crt'
-            - '--tls-key=/etc/tls/private/tls.key'
-            - '--upstream=http://localhost:8888'
-            - '--upstream-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt'
-            - '--email-domain=*'
-            - '--skip-provider-button'
-            - '--openshift-sar={"verb":"get","resource":"notebooks","resourceAPIGroup":"kubeflow.org","resourceName":"build-models-cuda","namespace":"$(NAMESPACE)"}'
-            - '--logout-url=https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}'
+            - --provider=openshift
+            - --https-address=:8443
+            - --http-address=
+            - --openshift-service-account={{ .Values.notebookName }}
+            - --cookie-secret-file=/etc/oauth/config/cookie_secret
+            - --cookie-expire=24h0m0s
+            - --tls-cert=/etc/tls/private/tls.crt
+            - --tls-key=/etc/tls/private/tls.key
+            - --upstream=http://localhost:8888
+            - --upstream-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+            - --email-domain=*
+            - --skip-provider-button
+            - --openshift-sar={"verb":"get","resource":"notebooks","resourceAPIGroup":"kubeflow.org","resourceName":"{{ .Values.notebookName }}","namespace":"$(NAMESPACE)"}
+            - --logout-url=https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
       enableServiceLinks: false
       serviceAccountName: "{{ .Values.notebookName }}"
       tolerations:
