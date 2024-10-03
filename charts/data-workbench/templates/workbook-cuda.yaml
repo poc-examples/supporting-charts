@@ -5,6 +5,7 @@ metadata:
   annotations:
     notebooks.opendatahub.io/inject-oauth: 'true'
     opendatahub.io/image-display-name: CUDA
+    notebooks.opendatahub.io/last-size-selection: Custom
     notebooks.opendatahub.io/oauth-logout-url: https://rhods-dashboard-redhat-ods-applications.apps.{{ .Values.domain }}/projects/{{ .Values.namespace }}?notebookLogout={{ .Values.notebookName }}
     opendatahub.io/accelerator-name: migrated-gpu
     openshift.io/description: ''
