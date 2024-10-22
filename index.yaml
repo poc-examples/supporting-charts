@@ -1,5 +1,38 @@
 apiVersion: v1
 entries:
+  ansible-runner:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.150061128Z"
+    description: A Helm chart for Kubernetes
+    digest: 8ca5173cd18925554b14e52c5dafa3763027e9497951298e3838e3caa1e15913
+    name: ansible-runner
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/ansible-runner-0.2.0/ansible-runner-0.2.0.tgz
+    version: 0.2.0
+  argocd-application:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.270314028Z"
+    description: A Helm chart for Kubernetes
+    digest: 3a11f2caa2ee946e9bdf4413829fd5db4df0c89d7a254d016a938e07faa313da
+    name: argocd-application
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/argocd-application-0.2.0/argocd-application-0.2.0.tgz
+    version: 0.2.0
+  argocd-team-control:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.362727364Z"
+    description: A Helm chart for Kubernetes
+    digest: 8e1396707a22345d4d5f5f9aa39cb21715809754be0c96fa30f5eced38e6a114
+    name: argocd-team-control
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/argocd-team-control-0.1.0/argocd-team-control-0.1.0.tgz
+    version: 0.1.0
   data-connector:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -295,4 +328,103 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secret-0.1.2/external-secret-0.1.2.tgz
     version: 0.1.2
-generated: "2024-10-04T14:15:46.931153792Z"
+  external-secrets-connectors:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.514153011Z"
+    description: A Helm chart for Kubernetes
+    digest: 40d086251870160ea3b8c4066475eec78d53151ec1b92232d8bb92482707a70d
+    name: external-secrets-connectors
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/external-secrets-connectors-0.1.2/external-secrets-connectors-0.1.2.tgz
+    version: 0.1.2
+  langflow-ide:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.600859165Z"
+    description: A Helm chart that installs Node Feature Discovery in OpenShift
+    digest: dbf7af4efc16da7453fc8b44c3b69097f677c72b934c5b055a87beccccfb09f3
+    name: langflow-ide
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/langflow-ide-0.1.2/langflow-ide-0.1.2.tgz
+    version: 0.1.2
+  rhoai-data-connector:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.714166651Z"
+    description: A Helm chart for Kubernetes
+    digest: 5e0a3b1418f75e83b40237b789704bda49e5f253418a8d3c09cb1b1c06e52354
+    name: rhoai-data-connector
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-data-connector-0.1.2/rhoai-data-connector-0.1.2.tgz
+    version: 0.1.2
+  rhoai-data-science-project:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.857775349Z"
+    description: A Helm chart for Kubernetes
+    digest: ec81e8805c110b0cfbd5e9bf2c710d1cb6beef0376847d86f08b7820014a7749
+    name: rhoai-data-science-project
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-data-science-project-0.1.3/rhoai-data-science-project-0.1.3.tgz
+    version: 0.1.3
+  rhoai-kfp-pipeline:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:08.978439958Z"
+    description: A Helm chart for Kubernetes
+    digest: fca093ab1390844f2cd8832e1eb0818807ef873451bb6450a7abcde7cbee8a67
+    name: rhoai-kfp-pipeline
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-kfp-pipeline-0.1.9/rhoai-kfp-pipeline-0.1.9.tgz
+    version: 0.1.9
+  rhoai-single-model-server:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:09.070885554Z"
+    description: A Helm chart for Kubernetes
+    digest: 7e107604095cf17242000853e2b849be303f5a86eb18464e5c19ce4bb10e2639
+    name: rhoai-single-model-server
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-single-model-server-0.1.1/rhoai-single-model-server-0.1.1.tgz
+    version: 0.1.1
+  rhoai-workbench:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:09.17518603Z"
+    description: A Helm chart for Kubernetes
+    digest: 1d2a36aac684c96c60f5b664f1dfe5afeabd659ef50fe29dddd15114fcfb4e46
+    name: rhoai-workbench
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-workbench-0.1.19/rhoai-workbench-0.1.19.tgz
+    version: 0.1.19
+  rhtap-pipeline-hermetic:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:09.335666577Z"
+    description: A chart for easily creating tekton pipelines
+    digest: cc13ccc2549dfe25ef36feb2824d322eb62cc409a0ec4e6d0b5a2b3b07d61892
+    name: rhtap-pipeline-hermetic
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhtap-pipeline-hermetic-0.2.1/rhtap-pipeline-hermetic-0.2.1.tgz
+    version: 0.2.1
+  web-service:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-22T05:00:09.461884291Z"
+    description: A Helm chart for Kubernetes
+    digest: 0c1616558da7b3067ff8087d90a62076b807aab7f60f3d366dc12d8c705d1ce1
+    name: web-service
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
+    version: 0.1.7
+generated: "2024-10-22T05:00:09.461982905Z"
