@@ -1,0 +1,11 @@
+config:
+  name: continue-config
+  mountOptions:
+    type: file
+  model:
+    name: starcoder
+    project: starcoder
+    domain: api.cluster.com
+
+workspace:
+  name: continue-workspace
