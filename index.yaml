@@ -317,6 +317,17 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/data-workbench-0.1.0/data-workbench-0.1.0.tgz
     version: 0.1.0
+  devspace-workspace:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-30T20:13:38.859887355Z"
+    description: A Helm chart that creates a devworkspace
+    digest: fcc2dfed76fa8bbf84024973535d8d29c9621d47ab1c300a577588a29f6df814
+    name: devspace-workspace
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/devspace-workspace-0.1.0/devspace-workspace-0.1.0.tgz
+    version: 0.1.0
   external-secret:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -427,4 +438,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-10-22T05:00:09.461982905Z"
+generated: "2024-10-30T20:13:38.859945865Z"
