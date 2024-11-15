@@ -330,6 +330,16 @@ entries:
   devspace-workspace:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-15T19:48:00.111889612Z"
+    description: A Helm chart that creates a devworkspace
+    digest: 04be66fad8b2c5aa02e63990f85f1d178f7b438e2fd70083a09ebed95158212a
+    name: devspace-workspace
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/devspace-workspace-0.1.3/devspace-workspace-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-15T19:42:08.925521655Z"
     description: A Helm chart that creates a devworkspace
     digest: e8adcbe87c54b7e52dd34a69421b290d0d0c0c6df409b74e9be3739167acdb60
@@ -709,4 +719,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-11-15T19:42:08.925661687Z"
+generated: "2024-11-15T19:48:00.111989509Z"
