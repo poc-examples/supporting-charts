@@ -35,7 +35,7 @@ data:
         "useCache": true,
         "useOtherFiles": true,
         "disable": false,
-        "template": "<|fim_prefix|>{{{ prefix }}}<|fim_suffix|>{{{ suffix }}}<|fim_middle|>"
+        "template": "<|fim_prefix|>{{ `{{{ prefix }}}` }}<|fim_suffix|>{{ `{{{ suffix }}}` }}<|fim_middle|>"
       },
       "customCommands": [
         {
