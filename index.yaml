@@ -418,6 +418,16 @@ entries:
   rhoai-sync-model:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-15T08:22:39.539486909Z"
+    description: A Helm chart for Kubernetes
+    digest: 744f289e6e874a322b29bd31d7d29916288489a46a77490f69adc286189f4b90
+    name: rhoai-sync-model
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-sync-model-0.1.13/rhoai-sync-model-0.1.13.tgz
+    version: 0.1.13
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-15T08:21:03.252031547Z"
     description: A Helm chart for Kubernetes
     digest: b56de5f9824876d61c882c5cb461e32ce35c2456ff32fc87aab8059495078687
@@ -579,4 +589,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-11-15T08:21:03.252244433Z"
+generated: "2024-11-15T08:22:39.539652176Z"
