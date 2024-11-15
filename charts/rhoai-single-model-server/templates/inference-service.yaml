@@ -16,7 +16,7 @@ spec:
     model:
       modelFormat:
         name: vLLM
-      name: ""
+      name: "{{ .Values.serviceName }}"
       resources:
         limits:
           cpu: "{{ .Values.resources.cpu }}"
