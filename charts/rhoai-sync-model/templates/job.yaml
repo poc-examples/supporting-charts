@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "{{ .Values.name }}-job"
+spec:
+  template:
+    spec:
+      containers:
+      - name: "{{ .Values.name }}-sync-model"
+        image: python:3.9-slim
+        command: ["sh", "-c", "pip install -r /scripts/requirements.txt && python /scripts/sync_model.py"]
+        env:
+        - name: MODEL_REVISION
+          value: "{{ .Values.model.revision }}"
+        - name: MODEL_REPOSITORY
+          value: "{{ .Values.model.repository }}"
+        envFrom:
+        - secretRef:
+            name: aws-connection-build-models-data-connector
+        volumeMounts:
+        - name: script
+          mountPath: /scripts
+          readOnly: true
+      restartPolicy: Never
+      volumes:
+      - name: script
+        configMap:
+          name: "{{ .Values.name }}-sync-model-script"
+  backoffLimit: 4

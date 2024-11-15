@@ -1,0 +1,4 @@
+name: qwen25-code-sync
+model:
+  repository: Qwen/Qwen2.5-Coder-7B-Instruct
+  revision: main
