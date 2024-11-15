@@ -2,12 +2,9 @@ apiVersion: serving.kserve.io/v1alpha1
 kind: ServingRuntime
 metadata:
   annotations:
-    enable-route: "true"
-    opendatahub.io/accelerator-name: ''
+    opendatahub.io/accelerator-name: migrated-gpu
     opendatahub.io/apiProtocol: REST
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
-    opendatahub.io/template-display-name: "{{ .Values.serviceName }}-{{ .Values.servingRuntime }}"
-    opendatahub.io/template-name: "{{ .Values.servingRuntime }}"
     openshift.io/display-name: "{{ .Values.serviceName }}"
   name: "{{ .Values.serviceName }}"
   labels:
@@ -20,7 +17,7 @@ spec:
     - args:
         - '--port=8080'
         - '--model=/mnt/models'
-        - "--served-model-name={{ .Values.serviceName }}"
+        - "--served-model-name={{ `{{ .Name }}` }}"
         - '--distributed-executor-backend=mp'
         - "--tensor_parallel_size={{ .Values.GPUCount }}"
       command:
