@@ -33,7 +33,7 @@ data:
             s3client.upload_file(
                 f"{file_name}",
                 f"{AWS_S3_BUCKET}", 
-                f"models/{relpath}"
+                f"models/{MODEL_REPOSITORY}/snapshots/{MODEL_REVISION}"
             )
     
     print(f"Model {MODEL_REPOSITORY}@{MODEL_REVISION} Sync'd")
