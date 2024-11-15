@@ -10,20 +10,26 @@ spec:
         image: python:3.9-slim
         command: ["sh", "-c", "pip install --upgrade pip --user && pip install -r /scripts/requirements.txt --user && python /scripts/sync_model.py"]
         env:
-        - name: MODEL_REVISION
-          value: "{{ .Values.model.revision }}"
-        - name: MODEL_REPOSITORY
-          value: "{{ .Values.model.repository }}"
+          - name: PIP_CACHE_DIR
+            value: ~/.cache/pip
+          - name: MODEL_REVISION
+            value: "{{ .Values.model.revision }}"
+          - name: MODEL_REPOSITORY
+            value: "{{ .Values.model.repository }}"
         envFrom:
-        - secretRef:
+          - secretRef:
             name: aws-connection-build-models-data-connector
         volumeMounts:
-        - name: script
-          mountPath: /scripts
-          readOnly: true
+          - name: script
+            mountPath: /scripts
+            readOnly: true
+          - name: local-cache
+            mountPath: /root/.local
       restartPolicy: Never
       volumes:
-      - name: script
-        configMap:
-          name: "{{ .Values.name }}-sync-model-script"
+        - name: script
+          configMap:
+            name: "{{ .Values.name }}-sync-model-script"
+        - name: local-cache
+          emptyDir: {}
   backoffLimit: 4
