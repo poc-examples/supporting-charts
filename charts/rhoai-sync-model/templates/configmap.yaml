@@ -29,11 +29,12 @@ data:
     for file_name in glob.glob(f"{SAVE_DIR}/*/snapshots/**/*", recursive=True):
         if os.path.isfile(file_name):
             relpath = os.path.relpath(file_name, SAVE_DIR)
+            basename = os.path.basename(relpath)
             print(f"syncing: models/{relpath}")
             s3client.upload_file(
                 f"{file_name}",
                 f"{AWS_S3_BUCKET}", 
-                f"models/{MODEL_REPOSITORY}/snapshots/{MODEL_REVISION}"
+                f"models/{MODEL_REPOSITORY}/snapshots/{MODEL_REVISION}/{basename}"
             )
     
     print(f"Model {MODEL_REPOSITORY}@{MODEL_REVISION} Sync'd")
