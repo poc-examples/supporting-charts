@@ -5,9 +5,9 @@ metadata:
   labels:
     controller.devfile.io/mount-to-devworkspace: 'true'
     controller.devfile.io/watch-configmap: 'true'
-    controller.devfile.io/mount-path: "/projects"
   annotations:
-    controller.devfile.io/mount-as: "{{ .Values.config.mountOptions.type }}"
+    controller.devfile.io/mount-as: subpath
+    controller.devfile.io/mount-path: /tmp/.continue-config/
 data:
   config.json: |
     {
@@ -26,6 +26,16 @@ data:
         "apiKey": "none",
         "title": "{{ .Values.config.model.name }}",
         "apiBase": "https://{{ .Values.config.model.name }}-{{ .Values.config.model.project }}.{{ .Values.config.model.domain }}/v1"
+      },
+      "tabAutocompleteOptions": {
+        "useSuffix": true,
+        "maxPromptTokens": 2800,
+        "debounceDelay": 1000,
+        "multilineCompletions": "never",
+        "useCache": true,
+        "useOtherFiles": true,
+        "disable": false,
+        "template": "<|fim_prefix|>{{{ prefix }}}<|fim_suffix|>{{{ suffix }}}<|fim_middle|>"
       },
       "customCommands": [
         {

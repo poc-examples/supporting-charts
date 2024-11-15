@@ -1,11 +1,9 @@
 config:
   name: continue-config
-  mountOptions:
-    type: file
   model:
-    name: starcoder
-    project: starcoder
-    domain: api.cluster.com
+    name: qwen25-coder-model-server
+    project: continue-dev2-project
+    domain: apps.rosa-rhoai-3.3nih.p1.openshiftapps.com
 
 workspace:
   name: continue-workspace
