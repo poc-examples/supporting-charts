@@ -28,15 +28,14 @@ data:
     s3client = boto3.client('s3')
     for file_name in glob.glob(f"{SAVE_DIR}/**/*", recursive=True):
         if os.path.isfile(file_name):
-            relpath = os.path.relpath(file_name, SAVE_DIR)
-            print(f"syncing: model/{relpath}/{MODEL_REVISION}")
+            print(f"syncing: models/{MODEL_REPOSITORY}/{MODEL_REVISION}")
             s3client.upload_file(
                 file_name,
                 f"{AWS_S3_BUCKET}", 
-                f"model/{relpath}/{MODEL_REVISION}"
+                f"model/{MODEL_REPOSITORY}/{MODEL_REVISION}"
             )
     
-    print(f"Model {MODEL_REPOSITORY}@{MODEL_REVISION} Sync'd")
+    print(f"Model {MODEL_REPOSITORY}@{MODEL_REVISION} Published")
 
   requirements.txt: |
     huggingface_hub
