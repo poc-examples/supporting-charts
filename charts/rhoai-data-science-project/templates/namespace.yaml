@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: "{{ .Values.project }}"
   labels:
-    opendatahub.io/dashboard: "true"
+    opendatahub.io/dashboard: 'true'
