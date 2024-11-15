@@ -4,4 +4,3 @@ metadata:
   name: "{{ .Values.project }}"
   labels:
     opendatahub.io/dashboard: "true"
-    app.kubernetes.io/instance: "{{ .Values.project }}"
