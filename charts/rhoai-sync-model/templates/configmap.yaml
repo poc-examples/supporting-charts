@@ -10,7 +10,7 @@ data:
     import boto3
     import glob
 
-    SAVE_DIR = /tmp/model/
+    SAVE_DIR = "/tmp/model/"
     os.environ["HF_HOME"] = SAVE_DIR
 
     AWS_S3_BUCKET = os.getenv("AWS_S3_BUCKET")
