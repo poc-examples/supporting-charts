@@ -385,6 +385,16 @@ entries:
   rhoai-data-science-project:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-15T19:19:04.561761637Z"
+    description: A Helm chart for Kubernetes
+    digest: cc59c99c789dccdc0f9b4a66946bcb2f50435ba363934977c62241c82294a41f
+    name: rhoai-data-science-project
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-data-science-project-0.1.6/rhoai-data-science-project-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-15T18:07:53.482000621Z"
     description: A Helm chart for Kubernetes
     digest: 62654626174b6061b0422bff827f320c35b83a1d509c681927d604f86cae12c1
@@ -425,6 +435,16 @@ entries:
     - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-kfp-pipeline-0.1.9/rhoai-kfp-pipeline-0.1.9.tgz
     version: 0.1.9
   rhoai-single-model-server:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-15T19:19:04.750984384Z"
+    description: A Helm chart for Kubernetes
+    digest: 415425de7dc0508b538f7811eea41d9871150b2d3899dfbb8eed4edda1535e4c
+    name: rhoai-single-model-server
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-single-model-server-0.1.4/rhoai-single-model-server-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-11-15T17:13:09.785162008Z"
@@ -669,4 +689,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-11-15T18:07:53.482153649Z"
+generated: "2024-11-15T19:19:04.751118364Z"
