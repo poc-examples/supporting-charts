@@ -18,7 +18,7 @@ spec:
             value: "{{ .Values.model.repository }}"
         envFrom:
           - secretRef:
-            name: aws-connection-build-models-data-connector
+              name: aws-connection-build-models-data-connector
         volumeMounts:
           - name: script
             mountPath: /scripts
