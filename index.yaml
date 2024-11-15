@@ -407,6 +407,16 @@ entries:
   rhoai-single-model-server:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-15T17:13:09.785162008Z"
+    description: A Helm chart for Kubernetes
+    digest: 888cf542430856310e7cb68fa64d032d0360292a96513a5f7c905c0494219692
+    name: rhoai-single-model-server
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-single-model-server-0.1.3/rhoai-single-model-server-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-10-22T05:00:09.070885554Z"
     description: A Helm chart for Kubernetes
     digest: 7e107604095cf17242000853e2b849be303f5a86eb18464e5c19ce4bb10e2639
@@ -639,4 +649,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-11-15T16:19:40.509245059Z"
+generated: "2024-11-15T17:13:09.785285439Z"
