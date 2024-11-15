@@ -24,7 +24,7 @@ spec:
             mountPath: /scripts
             readOnly: true
           - name: local-cache
-            mountPath: /root/.local
+            mountPath: /.local
       restartPolicy: Never
       volumes:
         - name: script
