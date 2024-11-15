@@ -39,5 +39,5 @@ data:
     print(f"Model {MODEL_REPOSITORY}@{MODEL_REVISION} Sync'd")
 
   requirements.txt: |
-    hugginface_hub
+    huggingface_hub
     boto3
