@@ -445,6 +445,16 @@ entries:
   rhoai-data-science-project:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-19T04:59:36.49125365Z"
+    description: A Helm chart for Kubernetes
+    digest: 329adcd699ef9593834e1c0e6f1fc80f7e0c8ee6c485a54b65eb2794e0cd70ca
+    name: rhoai-data-science-project
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/rhoai-data-science-project-0.1.10/rhoai-data-science-project-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-16T05:07:26.053409556Z"
     description: A Helm chart for Kubernetes
     digest: 57e029cb596e022958e50727dbc4c887f5e5faad89fd4dcaac6f50ba9123e571
@@ -769,4 +779,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-11-16T19:35:17.882628489Z"
+generated: "2024-11-19T04:59:36.491402539Z"
