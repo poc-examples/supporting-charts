@@ -3,6 +3,16 @@ entries:
   ansible-runner:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-28T07:01:57.141279744Z"
+    description: A Helm chart for Kubernetes
+    digest: db20da9dd596e971ed2e87fc08875090d70e93a0df13e66c22089acb2fb9d391
+    name: ansible-runner
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/ansible-runner-0.2.4/ansible-runner-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-28T06:22:38.737643725Z"
     description: A Helm chart for Kubernetes
     digest: 82bda6a6e55351076e8a76c379a6fa16dacf98e87ca8e99513860cb0d0874d2a
@@ -799,4 +809,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-11-28T06:22:38.737836954Z"
+generated: "2024-11-28T07:01:57.141460895Z"
