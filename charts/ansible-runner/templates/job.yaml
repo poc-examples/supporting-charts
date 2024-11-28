@@ -22,8 +22,14 @@ spec:
             ls -la /etc/ansible
             ansible-galaxy install -r /etc/ansible/requirements.yaml
             ansible-playbook /etc/ansible/playbook.yaml;
+        {{- if hasKey .Values.runner "envFrom" }}
+        envFrom:
+{{ toYaml .Values.runner.envFrom | indent 10 }}
+        {{- end }}
+        {{- if hasKey .Values.runner "env" }}
         env:
 {{ toYaml .Values.runner.env | indent 10 }}
+        {{- end }}
         volumeMounts:
         - name: playbook-volume
           mountPath: /etc/ansible

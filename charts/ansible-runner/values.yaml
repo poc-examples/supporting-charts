@@ -6,6 +6,11 @@ runner:
   image: "registry.access.redhat.com/ubi9/python-311:latest"
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
+  # envFrom:
+  #   - secretRef:
+  #       name: rosa-token
+  #   - secretRef:
+  #       name: keycloak-client-secret-openshift
   # env:
   #   - name: VAULT_TOKEN
   #     value: placeholder
