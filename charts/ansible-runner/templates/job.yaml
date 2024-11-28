@@ -17,6 +17,10 @@ spec:
         command: ["/bin/bash", "-c"]
         args:
           - |
+            curl -L https://github.com/openshift/rosa/releases/download/v1.2.48/rosa_Linux_x86_64.tar.gz -o rosa.tar.gz;
+            tar -xvzf rosa.tar.gz;
+            mv rosa /usr/local/bin/rosa;
+            chmod +x /usr/local/bin/rosa;
             pip install ansible;
             pip install openshift;
             ls -la /etc/ansible
