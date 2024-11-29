@@ -3,7 +3,7 @@ scope: Role
 runner:
   name: "default"
   namespace: "default"
-  image: "docker.io/cengleby86/ansible_runner:latest"
+  image: "quay.io/rh_ee_cengleby/ansible_runner:latest"
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
   # envFrom:
