@@ -818,6 +818,17 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/rhtap-pipeline-hermetic-0.2.1/rhtap-pipeline-hermetic-0.2.1.tgz
     version: 0.2.1
+  tekton-pipeline-generic:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-01-07T20:11:18.704429453Z"
+    description: A Helm chart for Kubernetes
+    digest: fc18c9ba2b99cf1654114f55cbeb796f283ad9f1132be9f06e90846cef64ed6e
+    name: tekton-pipeline-generic
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/tekton-pipeline-generic-0.0.1/tekton-pipeline-generic-0.0.1.tgz
+    version: 0.0.1
   web-service:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -829,4 +840,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2024-11-29T05:38:00.684755828Z"
+generated: "2025-01-07T20:11:18.70469574Z"
