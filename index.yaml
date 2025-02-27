@@ -843,6 +843,16 @@ entries:
   web-service:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-02-27T15:03:09.836296658Z"
+    description: A Helm chart for Kubernetes
+    digest: 700ccfdfbd948d61291db1ec6d3d4f090646555a380d583ed607e4d073bc6c8b
+    name: web-service
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.9/web-service-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-02-27T14:51:12.00291756Z"
     description: A Helm chart for Kubernetes
     digest: f502264344fe90e8c673eabba89565a138c9a7b2f8e87effca93efa8580688e4
@@ -861,4 +871,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2025-02-27T14:51:12.003017775Z"
+generated: "2025-02-27T15:03:09.836454832Z"
