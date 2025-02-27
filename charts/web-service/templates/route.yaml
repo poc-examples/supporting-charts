@@ -4,7 +4,7 @@ metadata:
   name: "{{ .Values.name }}"
 spec:
   port:
-    targetPort: 80
+    targetPort: 8000
   to:
     kind: Service
     name: "{{ .Values.name }}"
