@@ -4,6 +4,17 @@ metadata:
   name: "{{ .Values.name }}"
 spec:
   entityOperator:
+    template:
+      pod:
+        affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                    - values:
+                        - lab
+                      key: type
+                      operator: In
     topicOperator: {}
     userOperator: {}
   kafka:
