@@ -7,6 +7,17 @@ spec:
     topicOperator: {}
     userOperator: {}
   kafka:
+    template:
+      pod:
+        affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                    - values:
+                        - lab
+                      key: type
+                      operator: In
     config:
       default.replication.factor: 3
       inter.broker.protocol.version: '3.8'
@@ -28,6 +39,17 @@ spec:
       type: ephemeral
     version: 3.8.0
   zookeeper:
+    template:
+      pod:
+        affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                    - values:
+                        - lab
+                      key: type
+                      operator: In
     replicas: 3
     storage:
       type: ephemeral
