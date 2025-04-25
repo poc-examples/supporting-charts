@@ -12,7 +12,7 @@ spec:
   conditions: []
   provider:
     vault:
-      server: "{{ .Values.shared.address }}"
+      server: "https://{{ .Values.shared.address }}"
       path: "secret"
       version: "v2"
       auth:
