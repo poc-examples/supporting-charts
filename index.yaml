@@ -490,6 +490,17 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/external-secrets-connectors-0.1.2/external-secrets-connectors-0.1.2.tgz
     version: 0.1.2
+  gitlab-repo-credentials:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-04-27T06:15:52.234674552Z"
+    description: A Helm chart for Kubernetes
+    digest: 622877e43ef7bfb7a4716ce0f2872ae77b2820e1bfb379ff8bee8b002ccc084a
+    name: gitlab-repo-credentials
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/gitlab-repo-credentials-0.0.1/gitlab-repo-credentials-0.0.1.tgz
+    version: 0.0.1
   kafka-instance:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -931,4 +942,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2025-04-25T16:02:51.110981534Z"
+generated: "2025-04-27T06:15:52.234892118Z"
