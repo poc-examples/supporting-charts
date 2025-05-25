@@ -39,6 +39,8 @@ additionalVars:
     namespace: "openshift-gitops"
   domain: apps.domain.com
 
+additionalPackages: []
+
 initialJob:
   enabled: true
 

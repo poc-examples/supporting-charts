@@ -22,6 +22,9 @@ spec:
               - |
                 pip install ansible;
                 pip install openshift;
+                {{- range .Values.additionalPackages }}
+                pip install {{ . }};
+                {{- end }}
                 ansible-galaxy install -r /etc/ansible/requirements.yaml;
                 ansible-playbook /etc/ansible/playbook.yaml;
             {{- if hasKey .Values.runner "envFrom" }}
