@@ -472,6 +472,16 @@ entries:
   external-secrets-connectors:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-05-28T17:55:35.987437779Z"
+    description: A Helm chart for Kubernetes
+    digest: 26ef91b353240fd789dc48b01aa0fbc72a9903da6bc4c700b45321a7df8989a0
+    name: external-secrets-connectors
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/external-secrets-connectors-0.1.7/external-secrets-connectors-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-04-29T16:33:44.221503012Z"
     description: A Helm chart for Kubernetes
     digest: 22221beb2292b2ac3b8c6ae939190153cf9a0307416ad3880857e6e95f9c7330
@@ -972,4 +982,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2025-05-25T06:06:46.277209154Z"
+generated: "2025-05-28T17:55:35.987710358Z"
