@@ -544,6 +544,16 @@ entries:
   kafka-instance:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-06-01T07:29:55.532047966Z"
+    description: A Helm chart for Kubernetes
+    digest: a2957cbaf478275cad7e7c09a7d553ff6c4eab1b2277b177e72e466b0111dbb6
+    name: kafka-instance
+    type: application
+    urls:
+    - https://github.com/poc-examples/supporting-charts/releases/download/kafka-instance-0.0.5/kafka-instance-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-04-15T14:31:26.817275194Z"
     description: A Helm chart for Kubernetes
     digest: c409d4f53385db482021ddf32ff31db14bd3e9ae6d2090cd2165ba6e21412ca0
@@ -982,4 +992,4 @@ entries:
     urls:
     - https://github.com/poc-examples/supporting-charts/releases/download/web-service-0.1.7/web-service-0.1.7.tgz
     version: 0.1.7
-generated: "2025-05-28T17:55:35.987710358Z"
+generated: "2025-06-01T07:29:55.532212343Z"
