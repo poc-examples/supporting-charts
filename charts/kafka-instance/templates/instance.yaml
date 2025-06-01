@@ -4,6 +4,7 @@ metadata:
   name: "{{ .Values.name }}"
 spec:
   entityOperator:
+    {{- if .Values.capacityEnabled }}
     template:
       pod:
         affinity:
@@ -12,12 +13,14 @@ spec:
               nodeSelectorTerms:
                 - matchExpressions:
                     - values:
-                        - lab
-                      key: type
+                        - kakfa-capacity
+                      key: platform.poc-examples.com/workload-role
                       operator: In
+    {{- end }}
     topicOperator: {}
     userOperator: {}
   kafka:
+    {{- if .Values.capacityEnabled }}
     template:
       pod:
         affinity:
@@ -26,9 +29,10 @@ spec:
               nodeSelectorTerms:
                 - matchExpressions:
                     - values:
-                        - lab
-                      key: type
+                        - kakfa-capacity
+                      key: platform.poc-examples.com/workload-role
                       operator: In
+    {{- end }}
     config:
       default.replication.factor: 3
       inter.broker.protocol.version: '3.8'
@@ -50,6 +54,7 @@ spec:
       type: ephemeral
     version: 3.8.0
   zookeeper:
+    {{- if .Values.capacityEnabled }}
     template:
       pod:
         affinity:
@@ -58,9 +63,10 @@ spec:
               nodeSelectorTerms:
                 - matchExpressions:
                     - values:
-                        - lab
-                      key: type
+                        - kakfa-capacity
+                      key: platform.poc-examples.com/workload-role
                       operator: In
+    {{- end }}
     replicas: 3
     storage:
       type: ephemeral
